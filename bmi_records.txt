@@ -1,0 +1,6 @@
+Name: Ahmed
+Age: 20
+Height: 1.80 m
+Weight: 70.00 kg
+BMI: 21.60 (Normal weight)
+----------------------------------------

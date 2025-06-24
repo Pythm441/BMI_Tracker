@@ -20,6 +20,16 @@ def health_tip(Class: str) -> str:
     }
     return tips.get(Class, "No specific advice available.")
 
+def save_to_file(name, age, height, weight, bmi, category):
+    with open("bmi_records.txt", "a") as file:
+        file.write(f"Name: {name}\n")
+        file.write(f"Age: {age}\n")
+        file.write(f"Height: {height:.2f} m\n")
+        file.write(f"Weight: {weight:.2f} kg\n")
+        file.write(f"BMI: {bmi:.2f} ({category})\n")
+        file.write("-" * 40 + "\n")
+    
+
 def main():
     print("Welcome to the BMI Calculator!")
 
@@ -43,6 +53,9 @@ def main():
     print(f"Classification: {classification}")
     print(f"Health Tip: {tip}")
     print("\nThank you for using the BMI Calculator!")
+
+    save_to_file(name, age, height, weight, bmi, classification)
+    print("Your data has been saved to 'bmi_records.txt'.")
 
 if __name__ == "__main__":
     main()
