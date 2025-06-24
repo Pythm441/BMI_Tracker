@@ -33,16 +33,16 @@ def main():
         print("Invalid input. Please enter numeric values for weight and height.")
         return
 
-print("\nCalculating your BMI...")
+    print("\nCalculating your BMI...")
 
-bmi = calculate_bmi(weight, height)
-classification = classify_bmi(bmi)
-tip = health_tip(classification)
+    bmi = calculate_bmi(weight, height)
+    classification = classify_bmi(bmi)
+    tip = health_tip(classification)
 
-print(f"\n{name}, aged {age}, your BMI is: {bmi:.2f}")
-print(f"Classification: {classification}")
-print(f"Health Tip: {tip}")
-print("\nThank you for using the BMI Calculator!")
+    print(f"\n{name}, aged {age}, your BMI is: {bmi:.2f}")
+    print(f"Classification: {classification}")
+    print(f"Health Tip: {tip}")
+    print("\nThank you for using the BMI Calculator!")
 
 if __name__ == "__main__":
     main()
